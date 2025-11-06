@@ -1,0 +1,11 @@
+# Build results
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Temporary files
+*.tmp
+*.log
+*.cache
