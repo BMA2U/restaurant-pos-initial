@@ -1,6 +1,6 @@
 ﻿namespace SmartPOS.Forms
 {
-    partial class FormUsers
+    partial class FormCategories
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,8 @@
             this.sBtnLast = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.sBtnExit = new System.Windows.Forms.ToolStripButton();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtJobDes = new System.Windows.Forms.TextBox();
-            this.lblJobDes = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.lblFullName = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtDes = new System.Windows.Forms.TextBox();
+            this.lblDes = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,8 +62,8 @@
             this.sBtnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(874, 73);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Size = new System.Drawing.Size(648, 73);
+            this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // sBtnSelect
@@ -170,143 +160,39 @@
             this.sBtnExit.Size = new System.Drawing.Size(50, 70);
             this.sBtnExit.Text = "Exit";
             this.sBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.sBtnExit.Click += new System.EventHandler(this.sBtnExit_Click);
             // 
-            // txtPhone
+            // txtDes
             // 
-            this.txtPhone.Location = new System.Drawing.Point(573, 167);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(271, 22);
-            this.txtPhone.TabIndex = 39;
+            this.txtDes.Location = new System.Drawing.Point(49, 119);
+            this.txtDes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDes.Name = "txtDes";
+            this.txtDes.Size = new System.Drawing.Size(271, 22);
+            this.txtDes.TabIndex = 37;
             // 
-            // lblPhone
+            // lblDes
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(439, 167);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(46, 16);
-            this.lblPhone.TabIndex = 38;
-            this.lblPhone.Text = "Phone";
+            this.lblDes.AutoSize = true;
+            this.lblDes.Location = new System.Drawing.Point(9, 119);
+            this.lblDes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDes.Name = "lblDes";
+            this.lblDes.Size = new System.Drawing.Size(32, 16);
+            this.lblDes.TabIndex = 36;
+            this.lblDes.Text = "Des";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(573, 133);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(271, 22);
-            this.txtEmail.TabIndex = 37;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(439, 132);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
-            this.lblEmail.TabIndex = 36;
-            this.lblEmail.Text = "Email";
-            // 
-            // txtJobDes
-            // 
-            this.txtJobDes.Location = new System.Drawing.Point(147, 199);
-            this.txtJobDes.Margin = new System.Windows.Forms.Padding(4);
-            this.txtJobDes.Name = "txtJobDes";
-            this.txtJobDes.Size = new System.Drawing.Size(271, 22);
-            this.txtJobDes.TabIndex = 35;
-            // 
-            // lblJobDes
-            // 
-            this.lblJobDes.AutoSize = true;
-            this.lblJobDes.Location = new System.Drawing.Point(13, 198);
-            this.lblJobDes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblJobDes.Name = "lblJobDes";
-            this.lblJobDes.Size = new System.Drawing.Size(58, 16);
-            this.lblJobDes.TabIndex = 34;
-            this.lblJobDes.Text = "Job Des";
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(147, 163);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(271, 22);
-            this.txtFullName.TabIndex = 33;
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(13, 163);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(68, 16);
-            this.lblFullName.TabIndex = 32;
-            this.lblFullName.Text = "Full Name";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(147, 129);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(271, 22);
-            this.txtPassword.TabIndex = 31;
-            this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(13, 128);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
-            this.lblPassword.TabIndex = 30;
-            this.lblPassword.Text = "Password";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(147, 93);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(271, 22);
-            this.txtUserName.TabIndex = 29;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(13, 93);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(76, 16);
-            this.lblUserName.TabIndex = 28;
-            this.lblUserName.Text = "User Name";
-            // 
-            // FormUsers
+            // FormCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 243);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtJobDes);
-            this.Controls.Add(this.lblJobDes);
-            this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.lblFullName);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.lblUserName);
+            this.ClientSize = new System.Drawing.Size(648, 272);
+            this.Controls.Add(this.txtDes);
+            this.Controls.Add(this.lblDes);
             this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "FormUsers";
+            this.Name = "FormCategories";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormUsers";
-            this.Load += new System.EventHandler(this.FormUsers_Load);
+            this.Text = "FormCategories";
+            this.Load += new System.EventHandler(this.FormCategories_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -328,17 +214,7 @@
         private System.Windows.Forms.ToolStripButton sBtnLast;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton sBtnExit;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtJobDes;
-        private System.Windows.Forms.Label lblJobDes;
-        private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.Label lblFullName;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtDes;
+        private System.Windows.Forms.Label lblDes;
     }
 }

@@ -11,24 +11,20 @@ using System.Windows.Forms;
 
 namespace SmartPOS.Forms
 {
-    public partial class FormUsers : Form
+    public partial class FormCategories : Form
     {
-        public FormUsers()
-        {
-            InitializeComponent();
-        }
         private SqlDataAdapter adapter;
         private DataTable dataTable;
         private DataRow Row;
         private int index;
-        private void sBtnExit_Click(object sender, EventArgs e)
+        public FormCategories()
         {
-            Close();
+            InitializeComponent();
         }
 
-        private void FormUsers_Load(object sender, EventArgs e)
+        private void FormCategories_Load(object sender, EventArgs e)
         {
-            adapter = new SqlDataAdapter("Select * from Users", adoClass.sqlCn);
+            adapter = new SqlDataAdapter("Select * from Categories", adoClass.sqlCn);
             dataTable = new DataTable();
             adapter.Fill(dataTable);
             index = 0;
@@ -39,12 +35,7 @@ namespace SmartPOS.Forms
             index = _index;
             if (dataTable.Rows.Count > 0 && _index >= 0 && _index <= dataTable.Rows.Count - 1)
             {
-                txtUserName.Text = dataTable.Rows[_index]["UserName"].ToString();
-                txtPhone.Text = dataTable.Rows[_index]["Phone"].ToString();
-                txtPassword.Text = dataTable.Rows[_index]["Password"].ToString();
-                txtJobDes.Text = dataTable.Rows[_index]["JobDes"].ToString();
-                txtFullName.Text = dataTable.Rows[_index]["FullName"].ToString();
-                txtEmail.Text = dataTable.Rows[_index]["Email"].ToString();
+                txtDes.Text = dataTable.Rows[_index]["Des"].ToString();
                 Row = dataTable.Rows[_index];
             }
         }
@@ -62,14 +53,8 @@ namespace SmartPOS.Forms
             if (dataRows.Length > 0)
             {
                 Row = dataRows[0];
-                txtUserName.Text = Row["UserName"].ToString();
-                txtPhone.Text = Row["Phone"].ToString();
-                txtPassword.Text = Row["Password"].ToString();
-                txtJobDes.Text = Row["JobDes"].ToString();
-                txtFullName.Text = Row["FullName"].ToString();
-                txtEmail.Text = Row["Email"].ToString();
+                txtDes.Text = Row["Des"].ToString();
             }
-
         }
 
         private void sBtnNew_Click(object sender, EventArgs e)
@@ -80,33 +65,15 @@ namespace SmartPOS.Forms
                 if (ctr is TextBox)
                     ctr.Text = String.Empty;
             }
-            txtUserName.Focus();
+            txtDes.Focus();
         }
 
         private void sBtnSave_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == String.Empty)
+            if (txtDes.Text == String.Empty)
             {
                 MessageBox.Show("Enter the user name");
-                txtUserName.Focus();
-                return;
-            }
-            if (txtPassword.Text == String.Empty)
-            {
-                MessageBox.Show("Enter the password");
-                txtPassword.Focus();
-                return;
-            }
-            if (txtFullName.Text == String.Empty)
-            {
-                MessageBox.Show("Enter the full name");
-                txtFullName.Focus();
-                return;
-            }
-            if (txtPhone.Text == String.Empty)
-            {
-                MessageBox.Show("Enter the phone Number");
-                txtPhone.Focus();
+                txtDes.Focus();
                 return;
             }
             saveData();
@@ -138,12 +105,7 @@ namespace SmartPOS.Forms
         }
         private void dataFillRow()
         {
-            Row["UserName"] = txtUserName.Text;
-            Row["FullName"] = txtFullName.Text;
-            Row["Email"] = txtEmail.Text;
-            Row["Phone"] = txtPhone.Text;
-            Row["JobDes"] = txtJobDes.Text;
-            Row["Password"] = txtPassword.Text;
+            Row["Des"] = txtDes.Text;
         }
 
         private void sBtnFirst_Click(object sender, EventArgs e)
@@ -176,11 +138,10 @@ namespace SmartPOS.Forms
 
         private void sBtnSelect_Click(object sender, EventArgs e)
         {
-            FormSelect select = new FormSelect("Select ID, FullName From Users", "None");
-            select.des = "FullName";
+            FormSelect select = new FormSelect("Select ID,Des From Categories", "FormCategories");
+            select.des = "Des";
             if (select.ShowDialog() == DialogResult.OK)
                 loadData(int.Parse(select.result));
-
         }
     }
 }

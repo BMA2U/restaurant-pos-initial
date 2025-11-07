@@ -27,5 +27,11 @@ namespace SmartPOS.Forms
             FormUsers form = new FormUsers();
             form.ShowDialog();
         }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            FormCategories form = new FormCategories();
+            form.ShowDialog();
+        }
     }
 }

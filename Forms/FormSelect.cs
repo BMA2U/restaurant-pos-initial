@@ -14,10 +14,16 @@ namespace SmartPOS.Forms
 {
     public partial class FormSelect : Form
     {
-        public FormSelect(string _selectTxt)
+        public FormSelect(string _selectTxt, string s)
         {
             InitializeComponent();
             selectTxt = _selectTxt;
+            if (s == "FormCategories")
+            {
+                lblDes.Text = "Des";
+                dgvItems.Columns["ColDes"].HeaderText = "Des";
+
+            }
 
         }
         private DataTable dt;
@@ -31,15 +37,21 @@ namespace SmartPOS.Forms
         }
         private void loadSelect()
         {
-            DataRow[] rows = dt.Select(des + " LIKE '%'+'" + txtDes.Text + "'+'%' ");
+            DataView dv = new DataView(dt);
+            dv.RowFilter = des + " LIKE '%" + txtDes.Text + "%'";
+            dv.Sort = "ID ASC"; // أو DESC للترتيب التنازلي
+
             dgvItems.Rows.Clear();
-            for (int i = 0; i <= rows.Length - 1; i++)
+
+            foreach (DataRowView drv in dv)
             {
-                dgvItems.Rows.Add(new object[]{
-                    rows[i][0],
-                    rows[i][des]
+                dgvItems.Rows.Add(new object[]
+                {
+                    drv["ID"],
+                    drv[des]
                 });
             }
+
         }
         private void FormSelect_Load(object sender, EventArgs e)
         {
@@ -49,12 +61,13 @@ namespace SmartPOS.Forms
             try
             {
                 adapter.Fill(dt);
+                loadSelect();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            loadSelect();
+
 
         }
 
