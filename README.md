@@ -1,5 +1,7 @@
 # Restaurant POS System (SmartPOS)
 
+**By Bassem Al-Taheri**
+
 ## Overview
 SmartPOS is an initial version of a **Point of Sale (POS)** system designed for restaurants.  
 It allows restaurant owners and staff to manage essential operations such as users, options, and system settings through a simple Windows Forms interface.
@@ -23,4 +25,4 @@ It allows restaurant owners and staff to manage essential operations such as use
 - **Version Control:** Git + GitHub
 
 
-## Eng.Bassem
+
